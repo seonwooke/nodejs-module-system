@@ -1,5 +1,5 @@
-const { send } = require('./request');
-const { read } = require('./response');
+import { send } from './request.mjs';
+import { read } from './response.mjs';
 
 function makeRequest (url, data) {
   // 요청을 보내기
@@ -9,5 +9,5 @@ function makeRequest (url, data) {
   return read();
 }
 
-const responseData = makeRequest('https://naver.com', 'any daa');
+const responseData = makeRequest('https://naver.com', 'any data');
 console.log(responseData);
